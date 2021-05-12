@@ -5,12 +5,13 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center_horizontal">
+
     <Button
             android:text="calculator"
             android:layout_width="200dp"
             android:layout_height="75dp"
             android:id="@+id/buttonCalc"
-            android:layout_marginTop="75dp" />
+            android:layout_marginTop="40dp" />
 
     <Button
             android:text="barcode"
@@ -25,5 +26,55 @@
             android:layout_height="75dp"
             android:id="@+id/buttonTodo"
             android:layout_marginTop="20dp" />
+
+    <TextView
+            android:text="@string/guessGame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:layout_marginTop="30dp"
+            android:gravity="center_horizontal"
+            android:shadowColor="@color/white"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+    <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+        <RadioButton
+                android:text="Two Digits Number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton2digits"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+        <RadioButton
+                android:text="Three Digits Number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton3digits"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+        <RadioButton
+                android:text="Four Digits Number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton4ditis"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+    </RadioGroup>
+
+    <Button
+            android:text="start"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonStart"
+            android:layout_marginTop="5dp"
+            android:textSize="20sp" />
 
 </LinearLayout>
