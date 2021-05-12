@@ -6,4 +6,68 @@
         android:layout_height="match_parent"
         tools:context=".GuessingGameActivity">
 
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewLast"
+            tools:layout_editor_absoluteY="55dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:visibility="invisible" />
+
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewRight"
+            tools:layout_editor_absoluteY="95dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:visibility="invisible" />
+
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewHint"
+            tools:layout_editor_absoluteY="155dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="24sp"
+            android:textColor="@android:color/holo_orange_dark"
+            android:visibility="invisible" />
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editTextTextGuess"
+            tools:layout_editor_absoluteY="210dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:hint="Enter your guess !"
+            android:gravity="center_horizontal"
+            android:textSize="24sp" />
+
+    <Button
+            android:text="confirm"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonConfirm"
+            tools:layout_editor_absoluteY="321dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:backgroundTint="@android:color/holo_red_dark"
+            android:textSize="24sp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
