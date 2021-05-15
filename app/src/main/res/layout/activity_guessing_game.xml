@@ -50,7 +50,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/editTextTextGuess"
+            android:id="@+id/editTextGuess"
             tools:layout_editor_absoluteY="210dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
