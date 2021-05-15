@@ -79,8 +79,8 @@ public class GuessingGameActivity extends AppCompatActivity {
                     int userGuess = Integer.parseInt(guess);
                     guessesList.add(userGuess);
 
-                    textViewLast.setText(guess);
-                    textViewRight.setText(remainingRight);
+                    textViewLast.setText("Your last guess is : "+guess);
+                    textViewRight.setText("Your remaining right : "+remainingRight);
 
                     if (random == userGuess) {
                         // 경고 박스 만들기
@@ -121,14 +121,51 @@ public class GuessingGameActivity extends AppCompatActivity {
                     }
 
                     if (random < userGuess) {
-                        textViewHint.setText("Increase your guess");
-                    }
-
-                    if (random > userGuess) {
                         textViewHint.setText("Decrease your guess");
                     }
 
+                    if (random > userGuess) {
+                        textViewHint.setText("Increase your guess");
+                    }
+
                     if (remainingRight == 0){
+                        // 경고 박스 만들기
+                        AlertDialog.Builder builder = new AlertDialog.Builder(GuessingGameActivity.this);
+                        //타이틀 설정
+                        builder.setTitle("Guessing Game");
+                        //취소 못하게 하b b
+                        builder.setCancelable(false);
+                        builder.setMessage("Sorry, your right to guess is over"
+                                + "\n\n My guess was"+random
+                                + "\n\n Your guesses : "+guessesList
+                                + "\n\n Would you like to play again?"
+                        );
+                        // Positive Button , new dialogue interface
+                        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Intent intent = new Intent(GuessingGameActivity.this, MainActivity.class);
+                                startActivity(intent);
+                                finish();
+                            }
+                        });
+
+                        //Negative Button and Click Listener
+                        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                //task back
+                                moveTaskToBack(true);
+                                //kill myPid
+                                android.os.Process.killProcess(android.os.Process.myPid());
+                                //system 종료
+                                System.exit(1);
+                            }
+                        });
+                        //생성 후 보여주기
+                        builder.create().show();
+
+
 
                     }
 
