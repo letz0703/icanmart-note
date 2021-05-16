@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         btn4digits = findViewById(R.id.radioButton4ditis);
 
 
+
+
         buttonStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

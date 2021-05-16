@@ -5,8 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,6 +19,8 @@ public class SplashActivity extends AppCompatActivity {
     private TextView textView;
     // animation for Image and Text
     Animation animationImage, animationText;
+    EditText name, email, phone;
+    Button signup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +35,7 @@ public class SplashActivity extends AppCompatActivity {
 
         imageView.setAnimation(animationImage);
         textView.setAnimation(animationText);
+
 
         // Main Activity 자동 오픈 시키키 : count down timer 사용
         new CountDownTimer(5000, 1000) {
@@ -47,5 +53,26 @@ public class SplashActivity extends AppCompatActivity {
             }
         }.start();
 
+        name = findViewById(R.id.editTextTextName);
+        email = findViewById(R.id.editTextTextEmail);
+        phone = findViewById(R.id.editTextPhone);
+        signup = findViewById(R.id.buttonSignup);
+
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String userName = name.getText().toString();
+                String userEmail = email.getText().toString();
+                int userPhone = Integer.valueOf(phone.getText().toString());
+
+                Intent i = new Intent(SplashActivity.this, secondActivity.class);
+
+                i.putExtra("name", userName);
+                i.putExtra("email", userEmail);
+                i.putExtra("phone", userPhone);
+
+                startActivity(i);
+            }
+        });
     }
 }
