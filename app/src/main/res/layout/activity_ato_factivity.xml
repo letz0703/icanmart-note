@@ -5,6 +5,55 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".AtoFActivity"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center">
 
+    <TextView
+            android:text="BMI CALCULATOR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            android:textSize="30sp"
+            android:textColor="@color/teal_700"
+            android:gravity="center" />
+
+    <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editTextNumber"
+            android:hint="Enter you weight(kg)"
+            android:layout_marginTop="20dp" />
+
+    <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editTextNumber2"
+            android:hint="Enter your height(cm)"
+            android:layout_marginTop="20dp" />
+
+    <Button
+            android:text="calculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button"
+            android:layout_marginTop="20dp" />
+
+    <TextView
+            android:text="If BMI is bigger than 25, it is considered over weight."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4"
+            android:gravity="center"
+            android:layout_marginTop="20dp" />
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp">
+
+    </FrameLayout>
 </LinearLayout>
