@@ -38,20 +38,20 @@ public class SplashActivity extends AppCompatActivity {
 
 
         // Main Activity 자동 오픈 시키키 : count down timer 사용
-        new CountDownTimer(5000, 1000) {
-            @Override
-            public void onTick(long millisUntilFinished) {
-
-            }
-
-            @Override
-            public void onFinish() {
-                // new Intent 장면전환 splash.this to MainActivity.class 그리고
-                // 끝내기
-                startActivity(new Intent(SplashActivity.this, MainActivity.class));
-                finish();
-            }
-        }.start();
+//        new CountDownTimer(5000, 1000) {
+//            @Override
+//            public void onTick(long millisUntilFinished) {
+//
+//            }
+//
+//            @Override
+//            public void onFinish() {
+//                // new Intent 장면전환 splash.this to MainActivity.class 그리고
+//                // 끝내기
+//                startActivity(new Intent(SplashActivity.this, MainActivity.class));
+//                finish();
+//            }
+//        }.start();
 
         name = findViewById(R.id.editTextTextName);
         email = findViewById(R.id.editTextTextEmail);
@@ -65,7 +65,7 @@ public class SplashActivity extends AppCompatActivity {
                 String userEmail = email.getText().toString();
                 int userPhone = Integer.valueOf(phone.getText().toString());
 
-                Intent i = new Intent(SplashActivity.this, secondActivity.class);
+                Intent i = new Intent(SplashActivity.this, SecondActivity.class);
 
                 i.putExtra("name", userName);
                 i.putExtra("email", userEmail);
