@@ -1,21 +1,27 @@
 package com.letz.icanmart;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.TextView;
 
 import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
 
+    TextView name, email;
+
     Button calculator;
     Button barcode;
     Button todo;
+
     private Button buttonStart;
     private RadioButton btn2digts, btn3digits, btn4digits;
 
@@ -32,6 +38,13 @@ public class MainActivity extends AppCompatActivity {
         btn2digts = findViewById(R.id.radioButton2digits);
         btn3digits = findViewById(R.id.radioButton3digits);
         btn4digits = findViewById(R.id.radioButton4ditis);
+
+        // 1. get fragment 지원 매니저
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        MySecondFragment mySecondFragment = new MySecondFragment();
+        fragmentTransaction.add(R.id.linear, mySecondFragment);
+        fragmentTransaction.commit();
 
         buttonStart.setOnClickListener(new View.OnClickListener() {
             @Override
