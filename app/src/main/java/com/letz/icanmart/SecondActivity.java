@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class SecondActivity extends AppCompatActivity {
 
     TextView name, email, phone;
-    Button bmi;
+    Button bmi,btnmain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,7 @@ public class SecondActivity extends AppCompatActivity {
         email = findViewById(R.id.TextViewEmail);
         phone = findViewById(R.id.TextViewPhone);
         bmi = findViewById(R.id.buttonBMI);
+        btnmain = findViewById(R.id.btnMain);
 
         Intent i = getIntent();
         // putExtra 한 값 받아오
@@ -43,5 +44,12 @@ public class SecondActivity extends AppCompatActivity {
             }
         });
 
+        btnmain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent iM = new Intent(SecondActivity.this, MainActivity.class);
+                startActivity(iM);
+            }
+        });
     }
 }

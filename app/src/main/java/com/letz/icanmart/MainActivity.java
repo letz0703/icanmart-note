@@ -67,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
 
+
         });
 
         todo.setOnClickListener(new View.OnClickListener() {
@@ -84,5 +85,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    public void takeData(String userName,String userEmail){
+        name = findViewById(R.id.textViewMainName);
+        email = findViewById(R.id.textViewMainEmail);
+
+        name.setText(userName);
+        email.setText(userEmail);
     }
 }

@@ -5,7 +5,8 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:context=".MyFirstFragment"
-        android:background="@color/purple_200">
+        android:background="@color/purple_200"
+        android:gravity="center_horizontal">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -22,5 +23,20 @@
             android:id="@+id/textViewResultInFragment"
             android:gravity="center"
             android:layout_marginTop="30dp" />
+
+    <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewFirstFragInfoData"
+            android:hint="Enter your information"
+            android:textSize="20sp"
+            android:gravity="center_horizontal" />
+
+    <Button
+            android:text="send data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonFirstFragSendData"
+            android:layout_marginTop="20dp" />
 
 </LinearLayout>

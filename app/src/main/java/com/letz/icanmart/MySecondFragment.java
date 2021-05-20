@@ -33,7 +33,10 @@ public class MySecondFragment extends Fragment {
         String userEmail = email.getText().toString();
 
         // Main activity 가져오기
-        
+        MainActivity mainActivity = (MainActivity) getActivity();
 
+        mainActivity.takeData(userName, userEmail);
+
+        return view;
     }
 }
