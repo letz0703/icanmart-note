@@ -44,4 +44,17 @@
             android:id="@+id/btn2ndFragSendData"
             android:layout_marginTop="20dp" />
 
+    <TextView
+            android:text="Information you left last time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView5"
+            android:textSize="20sp" />
+
+    <TextView
+            android:text="You said:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewInfoFromFristFrag" />
+
 </LinearLayout>
