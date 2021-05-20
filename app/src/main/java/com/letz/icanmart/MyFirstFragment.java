@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 /**
@@ -16,6 +17,8 @@ import android.widget.TextView;
  */
 public class MyFirstFragment extends Fragment {
 
+    TextView info;
+    Button send;
 
     TextView result;
     public MyFirstFragment() {

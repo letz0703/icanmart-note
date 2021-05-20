@@ -9,8 +9,7 @@
     <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
+            android:layout_height="wrap_content">
 
         <Button
                 android:text="todo"
@@ -98,5 +97,13 @@
             android:layout_height="wrap_content"
             android:id="@+id/textViewMainEmail"
             android:hint="Email" />
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="246dp"
+            android:id="@+id/frame"
+            android:background="#8BC34A">
+
+    </FrameLayout>
 
 </LinearLayout>

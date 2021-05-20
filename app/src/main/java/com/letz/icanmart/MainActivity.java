@@ -43,7 +43,10 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         MySecondFragment mySecondFragment = new MySecondFragment();
-        fragmentTransaction.add(R.id.linear, mySecondFragment);
+        MyFirstFragment myFirstFragment = new MyFirstFragment();
+
+//        fragmentTransaction.add(R.id.linear, mySecondFragment);
+        fragmentTransaction.replace(R.id.frame, myFirstFragment);
         fragmentTransaction.commit();
 
         buttonStart.setOnClickListener(new View.OnClickListener() {
