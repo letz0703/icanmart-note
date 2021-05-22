@@ -3,6 +3,8 @@ package com.letz.icanmart;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,6 +34,8 @@ public class MyFirstFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_my_first, container, false);
         //match textView with it's id
         result = view.findViewById(R.id.textViewResultInFragment);
+        info = view.findViewById(R.id.textViewFirstFragInfoData);
+        send = view.findViewById(R.id.buttonFirstFragSendData);
 
         Bundle bundle = getArguments();
         int userWeight = bundle.getInt("weight");
@@ -39,6 +43,24 @@ public class MyFirstFragment extends Fragment {
 
         //calculate
         double userBmi = userWeight*1000/(userHeight*userHeight);
+        send.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String information = info.getText().toString();
+
+                Bundle bundle = new Bundle();
+                bundle.putString("info", information);
+
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+                MySecondFragment secondFragment = new MySecondFragment();
+                secondFragment.setArguments(bundle);
+
+                fragmentTransaction.replace(R.id.frame, secondFragment);
+
+            }
+        });
         result.setText("Your BMI is : "+userBmi);
 
         return view;
