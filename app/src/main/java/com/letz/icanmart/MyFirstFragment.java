@@ -58,6 +58,7 @@ public class MyFirstFragment extends Fragment {
                 secondFragment.setArguments(bundle);
 
                 fragmentTransaction.replace(R.id.frame, secondFragment);
+                fragmentTransaction.commit();
 
             }
         });

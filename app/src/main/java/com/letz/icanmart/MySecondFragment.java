@@ -9,8 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MySecondFragment extends Fragment {
+
+    TextView info;
 
     EditText name, email;
     Button send;
@@ -27,10 +30,17 @@ public class MySecondFragment extends Fragment {
 
         name = view.findViewById(R.id.editText2ndFragName);
         email = view.findViewById(R.id.editTextText2ndFragEmail);
+        info = view.findViewById(R.id.textViewFirstFragInfoData);
         send = view.findViewById(R.id.btn2ndFragSendData);
+
+        Bundle bundle = getArguments();
+        String userInfo = bundle.getString("userInfo");
+
+        info.setText(userInfo);
 
         String userName = name.getText().toString();
         String userEmail = email.getText().toString();
+
 
         // Main activity 가져오기
         MainActivity mainActivity = (MainActivity) getActivity();
