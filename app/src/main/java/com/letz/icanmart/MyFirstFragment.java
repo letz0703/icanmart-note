@@ -54,10 +54,11 @@ public class MyFirstFragment extends Fragment {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-                MySecondFragment secondFragment = new MySecondFragment();
-                secondFragment.setArguments(bundle);
+//                MySecondFragment secondFragment = new MySecondFragment();
+                MyFirstFragment myFirstFragment  = new MyFirstFragment();
+                myFirstFragment.setArguments(bundle);
 
-                fragmentTransaction.replace(R.id.frame, secondFragment);
+                fragmentTransaction.add(R.id.frame, myFirstFragment);
                 fragmentTransaction.commit();
 
             }

@@ -8,15 +8,12 @@
         android:orientation="vertical"
         android:gravity="center">
 
-    <ImageView
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            app:srcCompat="@drawable/splash"
-            android:id="@+id/imageView"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="10dp" />
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/splashFrame">
+
+    </FrameLayout>
 
     <TextView
             android:text="Number Guessing Game"

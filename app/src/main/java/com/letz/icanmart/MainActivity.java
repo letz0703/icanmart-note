@@ -42,10 +42,10 @@ public class MainActivity extends AppCompatActivity {
         // 1. get fragment 지원 매니저
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        MySecondFragment mySecondFragment = new MySecondFragment();
         MyFirstFragment myFirstFragment = new MyFirstFragment();
+        MySecondFragment mySecondFragment = new MySecondFragment();
 
-//        fragmentTransaction.add(R.id.linear, mySecondFragment);
+        fragmentTransaction.replace(R.id.linear, mySecondFragment);
         fragmentTransaction.replace(R.id.frame, myFirstFragment);
         fragmentTransaction.commit();
 
